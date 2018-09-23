@@ -24,7 +24,3 @@ class FieldTypes(models.Model):
 class RiskFields(models.Model):
     risks = models.ForeignKey(RiskTypes, on_delete=models.CASCADE,null=True)
     field_types = models.ManyToManyField(FieldTypes)
-    depth = 1
-
-    def __str__(self):
-        return self.risks.name
